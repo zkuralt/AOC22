@@ -56,6 +56,22 @@ for(i in 1:nrow(input)){
 
 sum(input$total_score)
 
+
+## @nezapajek inspired solution
+
+input <- advent_input(day = 2, year = 2022, parse = TRUE)
+
+dict <- data.frame(match = unique(input$x))
+dict$match
+dict$value <- c(4, 3, 1, 2, 6, 8, 9, 5, 7)
+
+score <- rep(NA, nrow(input))
+for(i in 1:nrow(input)){
+  score[i] <- dict$value[input$x[i] == dict$match]
+}
+
+sum(score)
+
 # 2.2
 
 input <- advent_input(day = 2, year = 2022, parse = TRUE)
@@ -99,7 +115,20 @@ sum(input$total_score)
 
 
 
+## Again, @nezapajek is an inspiration (:
 
+input <- advent_input(day = 2, year = 2022, parse = TRUE)
+
+dict <- data.frame(match = unique(input$x))
+dict$match
+dict$value <- c(3, 8, 1, 6, 7, 4, 9, 5, 2)
+
+score <- rep(NA, nrow(input))
+for(i in 1:nrow(input)){
+  score[i] <- dict$value[input$x[i] == dict$match]
+}
+
+sum(score)
 
 
 
