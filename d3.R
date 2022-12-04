@@ -1,7 +1,6 @@
 source("set_env.R")
 
 library(adventdrob)
-library(stringr)
 
 input <- advent_input(day = 3, year = 2022, parse = TRUE)
 scoreboard <- data.frame(letter = c(letters, LETTERS), val = 1:52)
